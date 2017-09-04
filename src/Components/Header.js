@@ -4,8 +4,13 @@ import {Navbar, Nav, NavItem} from 'react-bootstrap';
 class Header extends Component {
 
   onLogin(){
-    this.props.onLogin()
+    this.props.onLogin();
   }
+
+  onLogoutn(){
+    this.props.onLogout();
+  }
+
 
   render(){
     return(
