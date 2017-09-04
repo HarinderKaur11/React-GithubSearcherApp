@@ -7,12 +7,19 @@ class Header extends Component {
     this.props.onLogin();
   }
 
-  onLogoutn(){
+  onLogout(){
     this.props.onLogout();
   }
 
 
   render(){
+    let page;
+    if(this.props.idToken){
+      page = <NavItem onClick={this.onLogout.bind(this)} href="#"> Logout</NavItem>
+    }else{
+      page = <NavItem onClick={this.onLogin.bind(this)} href="#"> Login</NavItem>
+    }
+
     return(
       <Navbar>
         <Navbar.Header>
@@ -22,7 +29,7 @@ class Header extends Component {
           </Navbar.Brand>
         </Navbar.Header>
         <Nav>
-          <NavItem onClick={this.onLogin.bind(this)}> Login</NavItem>
+          {page}
         </Nav>
       </Navbar>
     );

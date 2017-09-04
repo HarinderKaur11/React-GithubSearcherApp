@@ -101,7 +101,6 @@ class App extends Component {
         <Header
         lock={this.lock}
         idToken={this.state.idToken}
-        profile={this.state.profile}
         onLogout={this.logout.bind(this)}
         onLogin={this.showLock.bind(this)}
         />
