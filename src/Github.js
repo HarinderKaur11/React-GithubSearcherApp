@@ -53,8 +53,8 @@ class Github extends Component {
     return(
       <div>
         <section id="card">
-        <Search />
-        <Profile />
+        <Search searchProfile={this.getProfile.bind(this)}/>
+        <Profile userData = {this.state} />
         </section>
       </div>
     );
