@@ -90,7 +90,7 @@ class App extends Component {
     if(this.state.idToken){
       gitty = <Github />
     }else{
-      gitty = "Click on login to view Github Viewer"
+      gitty = "Login or Signup to use th Application"
     }
 
     return (
@@ -104,7 +104,8 @@ class App extends Component {
         onLogout={this.logout.bind(this)}
         onLogin={this.showLock.bind(this)}
         />
-        {gitty}
+        <h1>WELCOME to The Github Searcher!!!</h1>
+      <h1><i>{gitty}</i></h1>
       </div>
     );
   }
