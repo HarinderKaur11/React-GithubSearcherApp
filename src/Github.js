@@ -10,7 +10,7 @@ class Github extends Component {
     super(props);
 
     this.state = {
-      username: 'hiteshchoudhary',
+      username: 'harinderkaur11',
       name: '',
       avatar: '',
       repos:'',
